@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PocketSmart AI</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+
+<header class="hero">
+    <div class="hero-content">
+        <div class="badge">✨ GenAI Powered Budget Assistant</div>
+
+        <h1>PocketSmart <span>AI</span></h1>
+
+        <p>
+            Smart budget planning and personalized recommendations
+            for your everyday needs.
+        </p>
+    </div>
+</header>
+
+
+<main class="container">
+
+    <section class="intro">
+        <h2>Choose Your Smart Planner</h2>
+        <p>
+            Enter your budget and requirements. PocketSmart AI will
+            create a personalized budget plan.
+        </p>
+    </section>
+
+
+    <section class="planner-grid">
+
+        <div class="planner-card">
+            <div class="icon">🏠</div>
+
+            <h3>Home Interior</h3>
+
+            <p>
+                Plan furniture, lighting, fans, storage and decoration
+                within your budget.
+            </p>
+
+            <button onclick="openPlanner('home')">
+                Plan My Home
+            </button>
+        </div>
+
+
+        <div class="planner-card">
+            <div class="icon">🎉</div>
+
+            <h3>Party Planner</h3>
+
+            <p>
+                Allocate your party budget across food, decoration,
+                entertainment and other expenses.
+            </p>
+
+            <button onclick="openPlanner('party')">
+                Plan My Party
+            </button>
+        </div>
+
+
+        <div class="planner-card">
+            <div class="icon">💎</div>
+
+            <h3>Jewelry Planner</h3>
+
+            <p>
+                Find a smart jewelry budget plan based on your
+                occasion and preferred style.
+            </p>
+
+            <button onclick="openPlanner('jewelry')">
+                Plan Jewelry
+            </button>
+        </div>
+
+    </section>
+
+
+    <section id="plannerSection" class="planner-section hidden">
+
+        <div class="form-header">
+            <h2 id="plannerTitle">Smart Planner</h2>
+            <p id="plannerDescription">
+                Enter your details below.
+            </p>
+        </div>
+
+
+        <div class="form-grid">
+
+            <div class="input-group">
+                <label>Total Budget (₹)</label>
+
+                <input
+                    id="budget"
+                    type="number"
+                    min="1"
+                    placeholder="Example: 50000"
+                >
+            </div>
+
+
+            <div class="input-group">
+                <label id="detailsLabel">Requirements</label>
+
+                <textarea
+                    id="details"
+                    rows="5"
+                    placeholder="Enter your requirements..."
+                ></textarea>
+            </div>
+
+        </div>
+
+
+        <button class="generate-btn" onclick="generateRecommendation()">
+            ✨ Generate Smart Recommendation
+        </button>
+
+        <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <p>Generating your smart budget plan...</p>
+        </div>
+
+
+        <div id="resultBox" class="result hidden">
+
+            <div class="result-header">
+                <h2>💡 Your PocketSmart Plan</h2>
+                <span id="sourceBadge"></span>
+            </div>
+
+            <div id="resultText"></div>
+
+        </div>
+
+    </section>
+
+
+    <section class="features">
+
+        <div>
+            <span>🤖</span>
+            <h3>AI Powered</h3>
+            <p>Gemini-powered personalized recommendations.</p>
+        </div>
+
+        <div>
+            <span>💰</span>
+            <h3>Budget Focused</h3>
+            <p>Plans are generated around your available budget.</p>
+        </div>
+
+        <div>
+            <span>⚡</span>
+            <h3>Easy to Use</h3>
+            <p>Simple planners with instant recommendations.</p>
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+    <p>© 2026 PocketSmart AI • Smart Budget & Recommendation Assistant</p>
+</footer>
+
+
+<script src="/static/js/script.js"></script>
+
+</body>
+</html>
